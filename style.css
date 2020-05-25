@@ -109,7 +109,7 @@ body {
   position: absolute;
   content: "";
   top: 24px;
-  left: calc(50vw - 32px);
+  left: calc(45vw - 32px);
   width: 800px;
   height: 800px;
   background-image: url("img/hero-image.svg");

@@ -1,0 +1,241 @@
+.comment-form {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 20px 12px;
+  }
+  
+.comment-inner {
+    position: relative;
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+.comment-label {
+    position: absolute;
+    top: -16px;
+    left: -9px;
+    padding: 4px 8px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  
+.comment-field,
+.comment-fio {
+    width: 95%;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    background-color: transparent;
+    font: inherit;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  
+.comment-field::placeholder,
+.comment-fio::placeholder {
+    color: #aaaaaa;
+    font: inherit;
+    font-size: 14px;
+    font-style: italic;
+  }
+  
+.comment-field:focus::placeholder ,
+.comment-fio:focus::placeholder {
+    font-size: 0;
+  }
+  
+.comment-field:hover::placeholder,
+.comment-field:active::placeholder,
+.comment-fio:hover::placeholder,
+.comment-fio:active::placeholder {
+    opacity: 0.5;
+  }
+  
+.inner-news .inner-heading {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+.news-full {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  
+.news-full img {
+    margin-bottom: 4px;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+.news-full .news-stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.news-full .heart {
+    padding: 12px 10px;
+    min-width: 40px;
+    min-height: 34px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 12px;
+    cursor: pointer;
+  }
+  
+.heart .likes-number {
+    margin-left: 24px;
+    line-height: 14px;
+  }
+  
+.news-full time {
+    margin-top: 14px;
+    margin-right: 12px;
+    margin-bottom: 8px;
+    margin-left: 0;
+  }
+  
+.news-full p {
+    margin-top: 0;
+    margin-right: 12px;
+    margin-bottom: 16px;
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+.comment-feed h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  
+.comment-list {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 12px;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: comments;
+  }
+  
+.comment-list li {
+    margin-bottom: 6px;
+    padding: 10px 12px;
+    min-height: 36px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+.comment-list .user-comment {
+    position: relative;
+    display: flex;
+  }
+  
+.comment-list .user-comment::before {
+    counter-increment: comments;
+    content: "#" counter(comments);
+    padding-right: 12px;
+    margin-right: 12px;
+    border-right: 1px solid;
+    font-weight: bold;
+  }
+  
+.comment-list .user-comment::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: -8px;
+    border: 4px solid;
+    border-left-color: transparent;
+    border-top-color: transparent;
+  }
+
+
+
+        /*  ОФОРМЛЕНИЕ  */
+
+.subscription, 
+.comment-form {
+    background-color: #2a2930;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+.subscription-message {
+    background-color: #9484f2;
+    color: #17161a;
+  }
+  
+.subscription-message::before {
+    background-image: url("img/icon-ok-dark.svg");
+  }
+  
+.subscription-label,
+.comment-label {
+    color: #f9dd79;
+  }
+
+.comment-label {
+    background-color: #2a2930;
+  }
+  
+.subscription-email,
+.comment-field,
+.comment-fio {
+    border: 1px solid #f9dd79;
+    color: #f2f2f2;
+  }
+  
+.heart {
+    color: #9484f2;
+    background-image: url("img/icon-heart-dark.svg");
+    opacity: 0.7;
+  }
+  
+.heart:focus {
+    outline-color: #6653d9;
+  }
+  
+.heart.added {
+    background-image: url("img/icon-heart-dark-added.svg");
+  }
+  
+.heart:active {
+    opacity: 1;
+    background-image: url("img/icon-heart-dark-active.svg");
+  }
+  
+.comment-list li {
+    background-color: #2a2930;
+  }
+  
+.user-comment:not(:first-child) {
+    animation: comment-blink-dark 600ms ease-in;
+  }
+  
+.user-comment::before {
+    border-right-color: #17161a;
+    color: #f9dd79;
+  }
+  
+.user-comment::after {
+    border-right-color: #2a2930;
+    border-bottom-color: #2a2930;
+  }
+  
+.user-comment:not(:first-child)::after {
+    animation: comment-blink-dark-after 600ms ease-in;
+  }
+  
+.comment-field:focus,
+.comment-fio:focus {
+    outline-color: #f9dd79;
+  }
+  

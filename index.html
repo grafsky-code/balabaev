@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comments.css">
     <title>Портфолио</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
@@ -33,7 +34,7 @@
           <p>На данный момент нахожусь на обучении HTML Academy. Опыта работы особо пока нет.</p>
           <h3>Я могу создавать простые контактные сайты без систем регистрации.</h3>
           <p>Также я занимаюсь не только версткой но и дизайном сайтов.</p>  
-            <h3>Мои навыки</h3>
+            <h3 class="subheading">Мои навыки</h3>
             <dl class="skills-list">
               <dt class="skill-html">HTML</dt>
               <dd class="level"><div style="width:60%;">60%</div></dd>
@@ -58,11 +59,33 @@
       </div>
     </section>
 
+    <section class="comments">
+      <div class="container">
+        <h2 class="subheading">Комментарии</h2>
+        <ol class="comment-list">
+          <span class="comment-label">Кекс-инструктор</span>
+          <li class="user-comment">Да ну, бред какой-то…</li>
+        </ol>
+        <form action="https://echo.htmlacademy.ru/courses" method="post" class="comment-form">
+          <div class="comment-inner">
+            <label class="comment-label" for="fio-input">ВАШ ФИО</label>
+            <input type="text" class="comment-fio" placeholder="ФИО" required id="fio-input">
+          </div>
+          <div class="comment-inner">
+            <label class="comment-label" for="comment-input">ВАШ КОММЕНТАРИЙ</label>
+            <input type="text" class="comment-field" placeholder="Комментарий" required id="comment-input">
+          </div>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+
     <footer class="page-footer">
       <div class="container">
         <a class="footer-email" href="mailto:balabaev.info@yandex.com">balabaev.info@yandex.com</a>
         <a class="footer-phone" href="tel:+79269715728">+7 926 971 57 28</a>
       </div>
     </footer>
+    <script src="comment.js"></script>
   </body>
 </html>
